@@ -107,7 +107,7 @@
             <span class="hljs-keyword">this</span>.stopStreamDecode();
         }
         <span class="hljs-keyword">this</span>.scanCanvas = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'canvas'</span>);
-        <span class="hljs-keyword">let</span> scaleFactor = <span class="hljs-built_in">Math</span>.ceil(stream.videoWidth / <span class="hljs-number">600</span>);
+        <span class="hljs-keyword">let</span> scaleFactor = <span class="hljs-built_in">Math</span>.ceil(stream.videoWidth / <span class="hljs-number">400</span>);
         <span class="hljs-keyword">this</span>.scanCanvas.width = stream.videoWidth / scaleFactor;
         <span class="hljs-keyword">this</span>.scanCanvas.height = stream.videoHeight / scaleFactor;
 
