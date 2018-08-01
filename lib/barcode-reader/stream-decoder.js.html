@@ -108,6 +108,7 @@
         }
         <span class="hljs-keyword">this</span>.scanCanvas = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'canvas'</span>);
         <span class="hljs-keyword">let</span> scaleFactor = <span class="hljs-built_in">Math</span>.ceil(stream.videoWidth / <span class="hljs-number">400</span>);
+        <span class="hljs-keyword">let</span> cropFactor = <span class="hljs-number">0.5</span>;
         <span class="hljs-keyword">this</span>.scanCanvas.width = stream.videoWidth / scaleFactor;
         <span class="hljs-keyword">this</span>.scanCanvas.height = stream.videoHeight / scaleFactor;
 
@@ -158,12 +159,17 @@
         <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.videoStream) {
             <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">'startScan'</span>);
             <span class="hljs-keyword">this</span>.scanContext.drawImage(<span class="hljs-keyword">this</span>.videoStream, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.scanCanvas.width, <span class="hljs-keyword">this</span>.scanCanvas.height);
-            <span class="hljs-keyword">const</span> imageData = <span class="hljs-keyword">this</span>.scanContext.getImageData(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.scanCanvas.width, <span class="hljs-keyword">this</span>.scanCanvas.height).data;
+            <span class="hljs-keyword">const</span> imageData = <span class="hljs-keyword">this</span>.scanContext.getImageData(
+                <span class="hljs-number">0</span>,
+                <span class="hljs-keyword">this</span>.scanCanvas.height * cropFactor / <span class="hljs-number">2</span>,
+                <span class="hljs-keyword">this</span>.scanCanvas.width,
+                <span class="hljs-keyword">this</span>.scanCanvas.height * (<span class="hljs-number">1</span> - cropFactor / <span class="hljs-number">2</span>)
+            ).data;
             <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">'imageData'</span>, <span class="hljs-keyword">this</span>.scanCanvas.toDataURL());
             <span class="hljs-keyword">this</span>.decoder.postMessage({
                 <span class="hljs-attr">scan</span>: imageData,
                 <span class="hljs-attr">scanWidth</span>: <span class="hljs-keyword">this</span>.scanCanvas.width,
-                <span class="hljs-attr">scanHeight</span>: <span class="hljs-keyword">this</span>.scanCanvas.height,
+                <span class="hljs-attr">scanHeight</span>: <span class="hljs-keyword">this</span>.scanCanvas.height * (<span class="hljs-number">1</span> - cropFactor),
                 <span class="hljs-attr">decodeFormats</span>: DEFAULT_FORMATS
             });
         }
