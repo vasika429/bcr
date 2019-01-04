@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>barcode-reader</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+        content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    
+    <link rel="stylesheet"
+        media="all"
+        href="../../assets/file_1.css"/>
+    
+    <link rel="stylesheet"
+        media="all"
+        href="../../assets/file_5.css"/>
+    
+    <link rel="stylesheet"
+        media="all"
+        href="../../assets/32px.png"/>
+    
+    <link rel="stylesheet"
+        media="all"
+        href="../../assets/40px.png"/>
+    
+    <link rel="stylesheet"
+        media="all"
+        href="../../assets/throbber.gif"/>
+    
+    <link rel="stylesheet"
+        media="all"
+        href="../../assets/file_7.css"/>
+    
+    <link rel="stylesheet"
+        media="all"
+        href="../../assets/file_8.css"/>
+    
+
+    
+    <script src="../../assets/file_2.js"
+        type="text/javascript"></script>
+    
+    <script src="../../assets/file_3.js"
+        type="text/javascript"></script>
+    
+    <script src="../../assets/file_4.js"
+        type="text/javascript"></script>
+    
+    <script src="../../assets/file_6.js"
+        type="text/javascript"></script>
+    
+
+    <script type="application/json" id="jsTreeJSON">
+        [{"id":"lib/common/styles/variables.less","text":"variables.less","icon":"jstree-file","parent":"lib/common/styles","a_attr":{"href":"../common/styles/variables.less.html"},"state":{"selected":false}},{"id":"lib","text":"lib","icon":"jstree-folder","parent":"#","a_attr":{"href":".."},"state":{"opened":true}},{"id":"lib/barcode-reader/barcode-reader.js","text":"barcode-reader.js","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"barcode-reader.js.html"},"state":{"selected":true}},{"id":"lib/barcode-reader/decoder-worker.js","text":"decoder-worker.js","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"decoder-worker.js.html"},"state":{"selected":false}},{"id":"lib/barcode-reader/index.js","text":"index.js","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"index.js.html"},"state":{"selected":false}},{"id":"lib/barcode-reader/renderer.js","text":"renderer.js","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"renderer.js.html"},"state":{"selected":false}},{"id":"lib/barcode-reader/stream-decoder.js","text":"stream-decoder.js","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"stream-decoder.js.html"},"state":{"selected":false}},{"id":"lib/barcode-reader/style.less","text":"style.less","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"style.less.html"},"state":{"selected":false}},{"id":"lib/barcode-reader/template.marko","text":"template.marko","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"template.marko.html"},"state":{"selected":false}},{"id":"lib/barcode-reader/template.marko.js","text":"template.marko.js","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"template.marko.js.html"},"state":{"selected":false}},{"id":"lib/barcode-reader/widget.js","text":"widget.js","icon":"jstree-file","parent":"lib/barcode-reader","a_attr":{"href":"widget.js.html"},"state":{"selected":false}},{"id":"lib/common","text":"common","icon":"jstree-folder","parent":"lib","a_attr":{"href":"../common"},"state":{"opened":false}},{"id":"lib/common/styles","text":"styles","icon":"jstree-folder","parent":"lib/common","a_attr":{"href":"../common/styles"},"state":{"opened":false}},{"id":"lib/barcode-reader","text":"barcode-reader","icon":"jstree-folder","parent":"lib","a_attr":{"href":"."},"state":{"opened":true}},{"id":"test","text":"test","icon":"jstree-folder","parent":"#","a_attr":{"href":"../../test"},"state":{"opened":false}},{"id":"test/playground","text":"playground","icon":"jstree-folder","parent":"test","a_attr":{"href":"../../test/playground"},"state":{"opened":false}},{"id":"test/playground/controller","text":"controller","icon":"jstree-folder","parent":"test/playground","a_attr":{"href":"../../test/playground/controller"},"state":{"opened":false}},{"id":"test/playground/controller/index.js","text":"index.js","icon":"jstree-file","parent":"test/playground/controller","a_attr":{"href":"../../test/playground/controller/index.js.html"},"state":{"selected":false}},{"id":"test/playground/controller/styles.less","text":"styles.less","icon":"jstree-file","parent":"test/playground/controller","a_attr":{"href":"../../test/playground/controller/styles.less.html"},"state":{"selected":false}},{"id":"test/playground/controller/template.marko","text":"template.marko","icon":"jstree-file","parent":"test/playground/controller","a_attr":{"href":"../../test/playground/controller/template.marko.html"},"state":{"selected":false}},{"id":"test/playground/controller/template.marko.js","text":"template.marko.js","icon":"jstree-file","parent":"test/playground/controller","a_attr":{"href":"../../test/playground/controller/template.marko.js.html"},"state":{"selected":false}},{"id":"test/playground/index.js","text":"index.js","icon":"jstree-file","parent":"test/playground","a_attr":{"href":"../../test/playground/index.js.html"},"state":{"selected":false}},{"id":"test/playground/test-page.marko","text":"test-page.marko","icon":"jstree-file","parent":"test/playground","a_attr":{"href":"../../test/playground/test-page.marko.html"},"state":{"selected":false}},{"id":"test/playground/test-page.marko.js","text":"test-page.marko.js","icon":"jstree-file","parent":"test/playground","a_attr":{"href":"../../test/playground/test-page.marko.js.html"},"state":{"selected":false}},{"id":"Gruntfile.js","text":"Gruntfile.js","icon":"jstree-file","parent":"#","a_attr":{"href":"../../Gruntfile.js.html"},"state":{"selected":false}},{"id":"README.md","text":"README.md","icon":"jstree-file","parent":"#","a_attr":{"href":"../../README.md.html"},"state":{"selected":false}}]
+    </script>
+</head>
+<body class="markdown-body">
+<h1>
+    barcode-reader
+</h1>
+<div class="subHeading">
+    lib/barcode-reader/barcode-reader.js
+</div>
+<button type="button" class="navigatorToggle">&#9776; files...</button>
+<nav class="navigationTree minimized">
+    <input type="text" id="jsTreeSearch" placeholder="search..."/>
+    <div></div>
+</nav>
+<section>
+    <ul class="sectionDetails ">
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+                
+            </div><div class="content">
+                <div class="highlight"><pre><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-keyword">const</span> EXIF = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./exif'</span>);
+
+<span class="hljs-keyword">const</span> DEFAULT_FORMATS = [
+    <span class="hljs-string">'Code128'</span>,
+    <span class="hljs-string">'Code93'</span>,
+    <span class="hljs-string">'Code39'</span>,
+    <span class="hljs-string">'EAN-13'</span>,
+    <span class="hljs-string">'2Of5'</span>,
+    <span class="hljs-string">'Inter2Of5'</span>,
+    <span class="hljs-string">'Codabar'</span>
+];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BarcodeReader</span>(<span class="hljs-params">config</span>) </span>{
+    <span class="hljs-keyword">this</span>.config = {
+        <span class="hljs-attr">scanCanvasWidth</span>: config.scanCanvasWidth || <span class="hljs-number">640</span>,
+        <span class="hljs-attr">scanCanvasHeight</span>: config.scanCanvasHeight || <span class="hljs-number">480</span>,
+        <span class="hljs-attr">multiple</span>: config.multiple || <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">decodeFormats</span>: config.decodeFormats || DEFAULT_FORMATS,
+        <span class="hljs-attr">forceUnique</span>: config.forceUnique || <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">localizationFeedback</span>: config.localizationFeedback || <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">skipOrientation</span>: config.skipOrientation || <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">barcodeWW</span>: config.barcodeWW || <span class="hljs-number">1</span>
+    };
+
+    <span class="hljs-keyword">this</span>.localizationCallback = config.onLocalization || <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{};
+    <span class="hljs-keyword">this</span>.streamCallback = config.onScan || <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{};
+
+    <span class="hljs-keyword">this</span>.ScanCanvas = <span class="hljs-keyword">this</span>.fixCanvas(<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'canvas'</span>));
+    <span class="hljs-keyword">this</span>.ScanCanvas.width = <span class="hljs-keyword">this</span>.config.scanCanvasWidth;
+    <span class="hljs-keyword">this</span>.ScanCanvas.height = <span class="hljs-keyword">this</span>.config.scanCanvasHeight;
+    <span class="hljs-keyword">this</span>.ScanContext = <span class="hljs-keyword">this</span>.ScanCanvas.getContext(<span class="hljs-string">'2d'</span>);
+    <span class="hljs-keyword">this</span>.barcodeWW = <span class="hljs-keyword">this</span>.config.barcodeWW;
+    <span class="hljs-keyword">this</span>.DecoderWorker = createWebWorkers(<span class="hljs-keyword">this</span>.barcodeWW);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createWebWorkers</span>(<span class="hljs-params">num</span>) </span>{
+    <span class="hljs-keyword">let</span> decodeWorkerArray = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>; i&lt; num; i++) {
+        decodeWorkerArray.push(
+            <span class="hljs-keyword">new</span> Worker(
+                URL.createObjectURL(
+                    <span class="hljs-keyword">new</span> Blob([<span class="hljs-built_in">require</span>(<span class="hljs-string">'./decoder-worker'</span>)], {
+                        <span class="hljs-attr">type</span>: <span class="hljs-string">'application/javascript'</span>
+                    })
+                )
+            )
+        );
+    }
+    <span class="hljs-keyword">return</span> decodeWorkerArray;
+}
+
+BarcodeReader.prototype = {
+    <span class="hljs-attr">SupportedFormats</span>: DEFAULT_FORMATS, <span class="hljs-comment">// Don't touch.</span>
+    ScanCanvas: <span class="hljs-literal">null</span>, <span class="hljs-comment">// Don't touch the canvas either.</span>
+    ScanContext: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">SquashCanvas</span>: <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'canvas'</span>),
+    <span class="hljs-attr">imageCallback</span>: <span class="hljs-literal">null</span>, <span class="hljs-comment">// Callback for the decoding of an image.</span>
+    streamCallback: <span class="hljs-literal">null</span>, <span class="hljs-comment">// Callback for the decoding of a video.</span>
+    localizationCallback: <span class="hljs-literal">null</span>, <span class="hljs-comment">// Callback for localization.</span>
+    Stream: <span class="hljs-literal">null</span>, <span class="hljs-comment">// The actual video.</span>
+    DecodeStreamActive: <span class="hljs-literal">false</span>, <span class="hljs-comment">// Will be set to false when stopStreamDecode() is called.</span>
+    Decoded: [], <span class="hljs-comment">// Used to enfore the ForceUnique property.</span>
+    <span class="hljs-comment">/*DecoderWorker: [
+     new Worker(
+     URL.createObjectURL(
+     new Blob([require('./decoder-worker')], {
+     type: 'application/javascript'
+     })
+     )
+     ),
+     new Worker(
+     URL.createObjectURL(
+     new Blob([require('./decoder-worker')], {
+     type: 'application/javascript'
+     })
+     )
+     )],*/</span>
+    DecoderWorker: [],
+    <span class="hljs-attr">orientationCallback</span>: <span class="hljs-literal">null</span>,</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+                <p> Value should be true or false.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    setRotationSkip(value) {
+        <span class="hljs-keyword">this</span>.config.skipOrientation = value;
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+                <p> Sets the callback function for the image decoding.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    setImageCallback(callBack) {
+        <span class="hljs-keyword">this</span>.imageCallback = callBack;
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+                <p> Sets the callback function for the video decoding.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    setStreamCallback(callBack) {
+        <span class="hljs-keyword">this</span>.streamCallback = callBack;
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+                <p> Sets the formats to decode, formats should be an array of a subset of the supported formats.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    setDecodeFormats(formats) {
+        <span class="hljs-keyword">this</span>.config.decodeFormats = [];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; formats.length; i++) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.SupportedFormats.indexOf(formats[i]) !== <span class="hljs-number">-1</span>) {
+                <span class="hljs-keyword">this</span>.config.decodeFormats.push(formats[i]);
+            }
+        }
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.decodeFormats.length === <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">this</span>.config.decodeFormats = <span class="hljs-keyword">this</span>.SupportedFormats.slice();
+        }
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+                <p> Removes a list of formats from the formats to decode.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    skipFormats(formats) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; formats.length; i++) {
+            <span class="hljs-keyword">const</span> index = <span class="hljs-keyword">this</span>.config.decodeFormats.indexOf(formats[i]);
+            <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">this</span>.config.decodeFormats.splice(index, <span class="hljs-number">1</span>);
+            }
+        }
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+                <p> Adds a list of formats to the formats to decode.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    addFormats(formats) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; formats.length; i++) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.SupportedFormats.indexOf(formats[i]) !== <span class="hljs-number">-1</span>) {
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.decodeFormats.indexOf(formats[i]) === <span class="hljs-number">-1</span>) {
+                    <span class="hljs-keyword">this</span>.config.decodeFormats.push(formats[i]);
+                }
+            }
+        }
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+                <p> The callback function for image decoding used internally by this.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    barcodeReaderImageCallback(e) {
+        <span class="hljs-keyword">if</span> (e.data.success === <span class="hljs-string">'localization'</span>) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.localizationFeedback) {
+                <span class="hljs-keyword">this</span>.localizationCallback(e.data.result);
+            }
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span> (e.data.success === <span class="hljs-string">'orientationData'</span>) {
+            <span class="hljs-keyword">this</span>.orientationCallback(e.data.result);
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">const</span> filteredData = [];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; e.data.result.length; i++) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.Decoded.indexOf(e.data.result[i].Value) === <span class="hljs-number">-1</span> || <span class="hljs-keyword">this</span>.config.forceUnique === <span class="hljs-literal">false</span>) {
+                filteredData.push(e.data.result[i]);
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.forceUnique) {
+                    <span class="hljs-keyword">this</span>.Decoded.push(e.data.result[i].Value);
+                }
+            }
+        }
+        <span class="hljs-keyword">this</span>.imageCallback(filteredData);
+        <span class="hljs-keyword">this</span>.Decoded = [];
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+                <p> The callback function for stream decoding used internally by this.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    barcodeReaderStreamCallback(worker, e) {
+        <span class="hljs-keyword">if</span>(e.data &amp;&amp; e.data.startTime) {
+            <span class="hljs-keyword">const</span> t2 =  performance.now();
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Call took "</span> + (t2 - e.data.startTime) + <span class="hljs-string">" milliseconds."</span>);
+        }
+        <span class="hljs-keyword">if</span> (e.data.success === <span class="hljs-string">'localization'</span>) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.localizationFeedback) {
+                <span class="hljs-keyword">this</span>.localizationCallback(e.data.result);
+            }
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span> (e.data.success &amp;&amp; <span class="hljs-keyword">this</span>.DecodeStreamActive) {
+            <span class="hljs-keyword">const</span> filteredData = [];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; e.data.result.length; i++) {
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.Decoded.indexOf(e.data.result[i].Value) === <span class="hljs-number">-1</span> || <span class="hljs-keyword">this</span>.ForceUnique === <span class="hljs-literal">false</span>) {
+                    filteredData.push(e.data.result[i]);
+                    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.ForceUnique) {
+                        <span class="hljs-keyword">this</span>.Decoded.push(e.data.result[i].Value);
+                    }
+                }
+            }
+            <span class="hljs-keyword">if</span> (filteredData.length &gt; <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">this</span>.streamCallback(filteredData);
+            }
+        }
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.DecodeStreamActive) {
+            <span class="hljs-keyword">this</span>.ScanContext.drawImage(<span class="hljs-keyword">this</span>.Stream, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.ScanCanvas.width, <span class="hljs-keyword">this</span>.ScanCanvas.height);
+            worker.postMessage({
+                <span class="hljs-attr">scan</span>: <span class="hljs-keyword">this</span>.ScanContext.getImageData(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.ScanCanvas.width, <span class="hljs-keyword">this</span>.ScanCanvas.height).data,
+                <span class="hljs-attr">scanWidth</span>: <span class="hljs-keyword">this</span>.ScanCanvas.width,
+                <span class="hljs-attr">scanHeight</span>: <span class="hljs-keyword">this</span>.ScanCanvas.height,
+                <span class="hljs-attr">multiple</span>: <span class="hljs-keyword">this</span>.config.multiple,
+                <span class="hljs-attr">decodeFormats</span>: <span class="hljs-keyword">this</span>.config.decodeFormats,
+                <span class="hljs-attr">cmd</span>: <span class="hljs-string">'normal'</span>,
+                <span class="hljs-attr">rotation</span>: <span class="hljs-number">1</span>
+            });
+        }
+        <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.DecodeStreamActive) {
+            <span class="hljs-keyword">this</span>.Decoded = [];
+        }
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+                <p> The image decoding function, image is a data source for an image or an image element.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    decodeImage(image) {
+        <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">new</span> Image();
+
+        <span class="hljs-keyword">if</span> (image <span class="hljs-keyword">instanceof</span> Image || image <span class="hljs-keyword">instanceof</span> HTMLImageElement) {
+            image.exifdata = <span class="hljs-literal">false</span>;
+            <span class="hljs-keyword">if</span> (image.complete) {
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.skipOrientation) {
+                    <span class="hljs-keyword">this</span>.barcodeReaderDecodeImage(image, <span class="hljs-number">1</span>, <span class="hljs-string">''</span>);
+                } <span class="hljs-keyword">else</span> {
+                    EXIF.getData(image, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">exifImage</span>) </span>{
+                        <span class="hljs-keyword">let</span> orientation = EXIF.getTag(exifImage, <span class="hljs-string">'Orientation'</span>);
+                        <span class="hljs-keyword">const</span> sceneType = EXIF.getTag(exifImage, <span class="hljs-string">'SceneCaptureType'</span>);
+                        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> orientation !== <span class="hljs-string">'number'</span>) {
+                            orientation = <span class="hljs-number">1</span>;
+                        }
+                        <span class="hljs-keyword">this</span>.barcodeReaderDecodeImage(exifImage, orientation, sceneType);
+                    });
+                }
+            } <span class="hljs-keyword">else</span> {
+                img.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.skipOrientation) {
+                        <span class="hljs-keyword">this</span>.barcodeReaderDecodeImage(img, <span class="hljs-number">1</span>, <span class="hljs-string">''</span>);
+                    } <span class="hljs-keyword">else</span> {
+                        EXIF.getData(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">exifImage</span>) </span>{
+                            <span class="hljs-keyword">let</span> orientation = EXIF.getTag(exifImage, <span class="hljs-string">'Orientation'</span>);
+                            <span class="hljs-keyword">const</span> sceneType = EXIF.getTag(exifImage, <span class="hljs-string">'SceneCaptureType'</span>);
+                            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> orientation !== <span class="hljs-string">'number'</span>) {
+                                orientation = <span class="hljs-number">1</span>;
+                            }
+                            <span class="hljs-keyword">this</span>.barcodeReaderDecodeImage(exifImage, orientation, sceneType);
+                        });
+                    }
+                };
+                img.src = image.src;
+            }
+        } <span class="hljs-keyword">else</span> {
+            img.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.config.skipOrientation) {
+                    <span class="hljs-keyword">this</span>.barcodeReaderDecodeImage(img, <span class="hljs-number">1</span>, <span class="hljs-string">''</span>);
+                } <span class="hljs-keyword">else</span> {
+                    EXIF.getData(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">exifImage</span>) </span>{
+                        <span class="hljs-keyword">let</span> orientation = EXIF.getTag(exifImage, <span class="hljs-string">'Orientation'</span>);
+                        <span class="hljs-keyword">const</span> sceneType = EXIF.getTag(exifImage, <span class="hljs-string">'SceneCaptureType'</span>);
+                        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> orientation !== <span class="hljs-string">'number'</span>) {
+                            orientation = <span class="hljs-number">1</span>;
+                        }
+                        <span class="hljs-keyword">this</span>.barcodeReaderDecodeImage(exifImage, orientation, sceneType);
+                    });
+                }
+            };
+            img.src = image;
+        }
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+                <p> Starts the decoding of a stream, the stream is a video not a blob i.e it’s an element.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    decodeStream(stream) {
+        <span class="hljs-keyword">this</span>.Stream = stream;
+        <span class="hljs-keyword">this</span>.DecodeStreamActive = <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> worker <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span>.DecoderWorker) {
+            worker.onmessage = <span class="hljs-keyword">this</span>.barcodeReaderStreamCallback.bind(<span class="hljs-keyword">this</span>, worker);
+            setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                <span class="hljs-keyword">this</span>.ScanContext.drawImage(stream, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.ScanCanvas.width, <span class="hljs-keyword">this</span>.ScanCanvas.height);
+                worker.postMessage({
+                    <span class="hljs-attr">scan</span>: <span class="hljs-keyword">this</span>.ScanContext.getImageData(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.ScanCanvas.width, <span class="hljs-keyword">this</span>.ScanCanvas.height).data,
+                    <span class="hljs-attr">scanWidth</span>: <span class="hljs-keyword">this</span>.ScanCanvas.width,
+                    <span class="hljs-attr">scanHeight</span>: <span class="hljs-keyword">this</span>.ScanCanvas.height,
+                    <span class="hljs-attr">multiple</span>: <span class="hljs-keyword">this</span>.config.multiple,
+                    <span class="hljs-attr">decodeFormats</span>: <span class="hljs-keyword">this</span>.config.decodeFormats,
+                    <span class="hljs-attr">cmd</span>: <span class="hljs-string">'normal'</span>,
+                    <span class="hljs-attr">rotation</span>: <span class="hljs-number">1</span>
+                });
+            }, <span class="hljs-number">500</span>);
+        }
+    },</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+                <p> Stops the decoding of a stream.</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>    stopStreamDecode: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>.DecodeStreamActive = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">this</span>.Decoded = [];
+    },
+
+    barcodeReaderDecodeImage(image, orientation, sceneCaptureType) {
+        <span class="hljs-keyword">if</span> (orientation === <span class="hljs-number">8</span> || orientation === <span class="hljs-number">6</span>) {
+            <span class="hljs-keyword">if</span> (sceneCaptureType === <span class="hljs-string">'Landscape'</span> &amp;&amp; image.width &gt; image.height) {
+                orientation = <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">this</span>.ScanCanvas.width = <span class="hljs-number">640</span>;
+                <span class="hljs-keyword">this</span>.ScanCanvas.height = <span class="hljs-number">480</span>;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">this</span>.ScanCanvas.width = <span class="hljs-number">480</span>;
+                <span class="hljs-keyword">this</span>.ScanCanvas.height = <span class="hljs-number">640</span>;
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">this</span>.ScanCanvas.width = <span class="hljs-number">640</span>;
+            <span class="hljs-keyword">this</span>.ScanCanvas.height = <span class="hljs-number">480</span>;
+        }
+        <span class="hljs-keyword">this</span>.DecoderWorker.onmessage = <span class="hljs-keyword">this</span>.barcodeReaderImageCallback;
+        <span class="hljs-keyword">this</span>.ScanContext.drawImage(image, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.ScanCanvas.width, <span class="hljs-keyword">this</span>.ScanCanvas.height);
+        <span class="hljs-keyword">this</span>.Orientation = orientation;
+        <span class="hljs-keyword">this</span>.DecoderWorker.postMessage({
+            <span class="hljs-attr">scan</span>: <span class="hljs-keyword">this</span>.ScanContext.getImageData(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">this</span>.ScanCanvas.width, <span class="hljs-keyword">this</span>.ScanCanvas.height).data,
+            <span class="hljs-attr">scanWidth</span>: <span class="hljs-keyword">this</span>.ScanCanvas.width,
+            <span class="hljs-attr">scanHeight</span>: <span class="hljs-keyword">this</span>.ScanCanvas.height,
+            <span class="hljs-attr">multiple</span>: <span class="hljs-keyword">this</span>.config.multiple,
+            <span class="hljs-attr">decodeFormats</span>: <span class="hljs-keyword">this</span>.config.decodeFormats,
+            <span class="hljs-attr">cmd</span>: <span class="hljs-string">'normal'</span>,
+            <span class="hljs-attr">rotation</span>: orientation,
+            <span class="hljs-attr">postOrientation</span>: <span class="hljs-keyword">this</span>.PostOrientation
+        });
+    },
+
+    detectVerticalSquash(img) {
+        <span class="hljs-keyword">const</span> ih = img.naturalHeight;
+        <span class="hljs-keyword">const</span> canvas = <span class="hljs-keyword">this</span>.SquashCanvas;
+        <span class="hljs-keyword">let</span> alpha;
+        <span class="hljs-keyword">let</span> data;
+        canvas.width = <span class="hljs-number">1</span>;
+        canvas.height = ih;
+        <span class="hljs-keyword">const</span> ctx = canvas.getContext(<span class="hljs-string">'2d'</span>);
+        ctx.drawImage(img, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+        <span class="hljs-keyword">try</span> {
+            data = ctx.getImageData(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, ih).data;
+        } <span class="hljs-keyword">catch</span> (err) {
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Cannot check verticalSquash: CORS?'</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">let</span> sy = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">let</span> ey = ih;
+        <span class="hljs-keyword">let</span> py = ih;
+        <span class="hljs-keyword">while</span> (py &gt; sy) {
+            alpha = data[(py - <span class="hljs-number">1</span>) * <span class="hljs-number">4</span> + <span class="hljs-number">3</span>];
+            <span class="hljs-keyword">if</span> (alpha === <span class="hljs-number">0</span>) {
+                ey = py;
+            } <span class="hljs-keyword">else</span> {
+                sy = py;
+            }
+            py = (ey + sy) &gt;&gt; <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">const</span> ratio = (py / ih);
+        <span class="hljs-keyword">return</span> (ratio === <span class="hljs-number">0</span>) ? <span class="hljs-number">1</span> : ratio;
+    },
+
+    fixCanvas(canvas) {
+        <span class="hljs-keyword">const</span> ctx = canvas.getContext(<span class="hljs-string">'2d'</span>);
+        <span class="hljs-keyword">const</span> drawImage = ctx.drawImage;
+        ctx.drawImage = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">img, sx, sy, sw, sh, dx, dy, dw, dh</span>) </span>{
+            <span class="hljs-keyword">let</span> vertSquashRatio = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">if</span> (!!img &amp;&amp; img.nodeName === <span class="hljs-string">'IMG'</span>) {
+                vertSquashRatio = <span class="hljs-keyword">this</span>.detectVerticalSquash(img);</pre></div>
+            </div>
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+                <p> sw || (sw = img.naturalWidth);
+ sh || (sh = img.naturalHeight);</p>
+
+            </div><div class="content">
+                <div class="highlight"><pre>            }
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">arguments</span>.length === <span class="hljs-number">9</span>) {
+                drawImage.call(ctx, img, sx, sy, sw, sh, dx, dy, dw, dh / vertSquashRatio);
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> sw !== <span class="hljs-string">'undefined'</span>) {
+                drawImage.call(ctx, img, sx, sy, sw, sh / vertSquashRatio);
+            } <span class="hljs-keyword">else</span> {
+                drawImage.call(ctx, img, sx, sy);
+            }
+        };
+        <span class="hljs-keyword">return</span> canvas;
+    }
+};
+
+<span class="hljs-built_in">module</span>.exports = BarcodeReader;</pre></div>
+            </div>
+        </li>
+        
+    </ul>
+</section>
+</body>
+</html>
