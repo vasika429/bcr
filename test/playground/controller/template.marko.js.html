@@ -106,7 +106,7 @@
           out.w(<span class="hljs-string">"&lt;div"</span> +
             attr(<span class="hljs-string">"id"</span>, widget.id) +
             attrs(__widgetAttrs(widget)) +
-            <span class="hljs-string">"&gt;&lt;div class=\"barcodeController\"&gt;&lt;h1&gt;Barcode reader component&lt;/h1&gt;&lt;button class=\"btn btn--primary\" type=\"button\""</span> +
+            <span class="hljs-string">"&gt;&lt;div class=\"barcodeController\"&gt;&lt;h1&gt;Barcode reader component demo&lt;/h1&gt;&lt;button class=\"btn btn--primary\" type=\"button\""</span> +
             attr(<span class="hljs-string">"id"</span>, widget.elId(<span class="hljs-string">"scanButton"</span>)) +
             <span class="hljs-string">" data-w-onclick=\"startScanning|"</span> +
             escapeXmlAttr(widget.id) +
@@ -135,7 +135,7 @@
           barcode_reader_tag({}, out);
           _cleanupWidgetArgs(out);
 
-          out.w(<span class="hljs-string">"&lt;/div&gt; test string &lt;div class=\"barcodeDebugger\"&gt;&lt;img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\""</span> +
+          out.w(<span class="hljs-string">"&lt;/div&gt;&lt;div class=\"barcodeDebugger\"&gt;&lt;img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\""</span> +
             attr(<span class="hljs-string">"id"</span>, widget.elId(<span class="hljs-string">"barcodeDebuggerImage"</span>)) +
             <span class="hljs-string">"&gt;&lt;div"</span> +
             attr(<span class="hljs-string">"id"</span>, widget.elId(<span class="hljs-string">"barcodeDebuggerMessage"</span>)) +
